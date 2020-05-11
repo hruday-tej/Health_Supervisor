@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderActivity"
+    android:background="#F9AA33">
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+        app:mbn_backgroundBottomColor="#232F34"
+        app:mbn_circleColor="#F9AA33"
+        app:mbn_defaultIconColor="#F9AA33"
+        app:mbn_selectedIconColor="#344955" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="25dp"
+        android:id="@+id/cardset"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#232234"
+            >
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button3"
+                android:text="I can Remember!"
+                android:layout_alignParentBottom="true"
+                android:textColor="#232F34"
+                android:layout_marginBottom="70dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cancelReminder"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button3"
+                android:text="Remind me!"
+                android:textColor="#232F34"
+                android:layout_above="@+id/cancelReminder"
+                android:id="@+id/reminderstart"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No reminders set"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:layout_above="@+id/medication"
+                android:layout_marginBottom="80dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/patrick_hand_sc"
+                android:id="@+id/current"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_above="@+id/reminderstart"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button2"
+                android:id="@+id/medication"
+                android:textColorHint="#F9AA33"
+                app:hintTextAppearance="@style/MyHintStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="What's the Medicine Name?"
+                    android:textColorHint="#F9AA33"
+                    android:textColor="#232f34"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

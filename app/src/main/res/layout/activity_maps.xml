@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        tools:context=".MapsActivity"    />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/progr"
+        style="@style/SpinKitView"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="#000000"
+        />
+<!--    <com.github.clans.fab.FloatingActionMenu-->
+<!--        android:id="@+id/floatingActionMenu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:menu_backgroundColor="@android:color/transparent"-->
+<!--        app:menu_openDirection="down"-->
+<!--        app:menu_showShadow="true"-->
+<!--        app:menu_colorNormal="#005cb2"-->
+<!--        android:paddingLeft="0dp"-->
+<!--        -->
+<!--        app:menu_icon="@drawable/downpress">-->
+
+<!--        <com.github.clans.fab.FloatingActionButton-->
+<!--            android:id="@+id/item1"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:fabSize="mini"-->
+<!--            app:fab_label="Pharmacies" />-->
+<!--    </com.github.clans.fab.FloatingActionMenu>-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/bottom_nav">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            android:id="@+id/check"
+            android:background="#344955"
+            android:tint="#f9aa33"
+            android:src="@drawable/loc"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/check"
+            android:background="@drawable/label"
+            android:padding="5dp"
+            android:text="Show Nearby Hospitals"
+            android:textColor="#232222"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+        app:mbn_backgroundBottomColor="#232F34"
+        app:mbn_circleColor="#F9AA33"
+        app:mbn_defaultIconColor="#F9AA33"
+        app:mbn_selectedIconColor="#344955" />
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:id="@+id/home"
+    android:background="#d9d9d9">
+
+
+
+
+    <me.ibrahimsn.particle.ParticleView
+        android:id="@+id/particleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:forceHasOverlappingRendering="false"
+        app:backgroundColor="#d9d9d9"
+        app:linesColor="#292929"
+        app:maxParticleRadius="15"
+        app:minParticleRadius="7"
+        app:particleColor="#232F34"
+        app:particleCount="40"></me.ibrahimsn.particle.ParticleView>
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:mbn_backgroundBottomColor="#232F34"
+        app:mbn_circleColor="#F9AA33"
+        app:mbn_defaultIconColor="#F9AA33"
+        app:mbn_selectedIconColor="#344955" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottom_nav"
+        android:id="@+id/recyclerView"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbars="vertical"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/bottom_nav">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_media_ff"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            app:backgroundTint="#344955"
+            android:tint="#F9AA33"
+            app:fab_label="Next Headline ?"
+            android:elevation="10dp"
+            app:rippleColor="#f3f3f3"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/label"
+            android:text="Next Headline ?"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/next"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

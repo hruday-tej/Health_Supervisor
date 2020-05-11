@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiagnosisActivity"
+    android:background="#344955">
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="4dp"
+        app:mbn_rippleColor="#f9f9f9"
+        app:mbn_backgroundBottomColor="#232F34"
+        app:mbn_circleColor="#F9AA33"
+        app:mbn_defaultIconColor="#F9AA33"
+        app:mbn_selectedIconColor="#344955" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentTop="true"
+        android:id="@+id/webView"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView"
+        app:SpinKit_Color="#F9AA33"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+
+        />
+
+
+
+</RelativeLayout>

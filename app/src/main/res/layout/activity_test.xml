@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity"
+    android:background="#0097A7">
+
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bottom_nav"
+        android:elevation="5dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editText"
+        android:layout_alignParentTop="true"
+        android:id="@+id/conv"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Enter the Text"
+        android:fontFamily="@font/imprima"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:layout_above="@+id/bottom_nav"
+        android:imeActionId="4"
+        android:imeOptions="actionSend"
+        android:layout_toLeftOf="@id/send"
+        android:layout_alignParentLeft="true"
+        android:elevation="4dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentEnd="true"
+        app:rippleColor="#ffffff"
+        android:backgroundTint="#424C58"
+        android:tint="#2AC5DE"/>
+
+
+
+</RelativeLayout>

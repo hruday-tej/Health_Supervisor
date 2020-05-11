@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">#ffffff</item>
+    </style>
+    <style name="MyHintStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#F9AA33</item>
+    </style>
+    <style name="toolbartheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">@font/alegreya_sans_sc_medium</item>
+    </style>
+
+</resources>
